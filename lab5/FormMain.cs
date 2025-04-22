@@ -1,8 +1,11 @@
 namespace VubCaffe;
 public partial class FormMain : Form {
+    private Bill bill;
+    
   public FormMain() {
     InitializeComponent();
-  }
+        bill = new Bill();
+    }
 
   private void btnExit_Click(object sender, EventArgs e) {
     if (MessageBox.Show("Jeste li sigurni da želite izaæi iz programa?", "Izlaz iz programa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK) {
@@ -10,7 +13,20 @@ public partial class FormMain : Form {
     }
   }
 
-  private void btnCocaCola_Click(object sender, EventArgs e) {
+    private void RefreshBill() {
+        RefreshItems();
+        RefreshTotal();
+    }
+
+    private void RefreshItems() {
+        lbItems.Items.Clear();
+        foreach (var product in bill.Products)
+        {
+            lbItems.Items.Add(product);
+        }
+    }
+
+    private void btnCocaCola_Click(object sender, EventArgs e) {
   }
 
   private void btnEspresso_Click(object sender, EventArgs e) {
