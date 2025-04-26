@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VubCaffe;
 
-
-namespace Vubcaffe
+namespace VubCaffe
 {
-    public class CocaCola : Drink
+    public class Latte : Drink
     {
-        public CocaCola() : base("Coca Cola", 0.33, 2.30)
+        public Latte() : base("Latte", 0.10, 0.80)
         {
         }
     }
