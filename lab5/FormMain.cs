@@ -18,7 +18,7 @@ public partial class FormMain : Form
 
     private void btnExit_Click(object sender, EventArgs e)
     {
-        if (MessageBox.Show("Jeste li sigurni da želite izaæi iz programa?", "Izlaz iz programa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+        if (MessageBox.Show("Jeste li sigurni da želite izaći iz programa?", "Izlaz iz programa", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
         {
             Close();
         }
@@ -75,14 +75,54 @@ public partial class FormMain : Form
 
     private void btnVoucher100Eur_Click(object sender, EventArgs e)
     {
+        bill.AddProduct(new Voucher100Eur());
+        RefreshBill();
     }
 
     private void btnNewBill_Click(object sender, EventArgs e)
     {
+        bill = new Bill();
+        RefreshBill();
     }
 
     private void btnBill_Click(object sender, EventArgs e)
     {
+        double totalAmount = bill.Total();
+
+        DialogResult result = MessageBox.Show(
+            $"Ukupno za plaćanje je: {totalAmount:0.00} €",
+            "Naplata",
+            MessageBoxButtons.OKCancel,
+            MessageBoxIcon.Information
+        );
+
+   
+        if (result == DialogResult.OK)
+        {
+            
+            bill = new Bill(); 
+            RefreshBill(); 
+        }
     }
+
+
+    private void btnSladoled_Click(object sender, EventArgs e)
+    {
+        bill.AddProduct(new Sladoled());
+        RefreshBill();
+    }   
+   
+   private void btnKolac_Click(object sender, EventArgs e)
+    {
+        bill.AddProduct(new Kolac());
+        RefreshBill();
+    }
+
+  private void btnCappucino_Click(object sender, EventArgs e)
+    {
+        bill.AddProduct(new Cappucino());
+        RefreshBill();  
+    }
+   
 }
 

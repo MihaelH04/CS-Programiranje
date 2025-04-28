@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VubCaffe;
 
 namespace VubCaffe
 {
-   public class Fanta : Drink
+    public class Voucher100Eur : Bonovi
     {
-        public Fanta() : base("Fanta", 0.33, 1.30)
+        public Voucher100Eur() : base("Poklonbon 100€", 100)
         {
         }
     }
-
-
 }

@@ -171,19 +171,21 @@
       btnCake.TabIndex = 3;
       btnCake.Text = "Kolač";
       btnCake.UseVisualStyleBackColor = true;
-      // 
-      // btnIceCream
-      // 
-      btnIceCream.Location = new Point(17, 26);
+      btnCake.Click += btnKolac_Click;
+            // 
+            // btnIceCream
+            // 
+            btnIceCream.Location = new Point(17, 26);
       btnIceCream.Name = "btnIceCream";
       btnIceCream.Size = new Size(76, 57);
       btnIceCream.TabIndex = 2;
       btnIceCream.Text = "Sladoled";
       btnIceCream.UseVisualStyleBackColor = true;
-      // 
-      // gbBeverages
-      // 
-      gbBeverages.Controls.Add(btnFanta);
+      btnIceCream.Click += btnSladoled_Click;   
+            // 
+            // gbBeverages
+            // 
+            gbBeverages.Controls.Add(btnFanta);
       gbBeverages.Controls.Add(btnSprite);
       gbBeverages.Controls.Add(btnCocaCola);
       gbBeverages.Location = new Point(34, 207);
@@ -201,9 +203,11 @@
       btnFanta.TabIndex = 3;
       btnFanta.Text = "Fanta";
       btnFanta.UseVisualStyleBackColor = true;
-      // 
-      // btnSprite
-      // 
+      btnFanta.Click += btnFanta_Click;
+
+            // 
+            // btnSprite
+            // 
       btnSprite.Location = new Point(109, 26);
       btnSprite.Name = "btnSprite";
       btnSprite.Size = new Size(76, 57);
@@ -233,6 +237,7 @@
       gbCoffe.TabIndex = 1;
       gbCoffe.TabStop = false;
       gbCoffe.Text = " Kave ";
+       
       // 
       // btnLatte
       // 
@@ -252,10 +257,11 @@
       btnCappucino.TabIndex = 1;
       btnCappucino.Text = "Cappucino";
       btnCappucino.UseVisualStyleBackColor = true;
-      // 
-      // btnEspresso
-      // 
-      btnEspresso.Location = new Point(17, 25);
+      btnCappucino.Click += btnCappucino_Click;
+            // 
+            // btnEspresso
+            // 
+            btnEspresso.Location = new Point(17, 25);
       btnEspresso.Name = "btnEspresso";
       btnEspresso.Size = new Size(76, 57);
       btnEspresso.TabIndex = 0;
