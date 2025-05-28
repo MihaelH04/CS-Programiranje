@@ -18,7 +18,7 @@ namespace NotesApp {
 
         private const string server = "sql.vub.zone,14330";
         // TODO: podesiti ispravnu bazu podataka
-        private const string baza = "";
+        private const string baza = "labos-khusak";
         private const string korisnickoIme = "sa";
         private const string lozinka = "VUBserver2020";
     }
