@@ -90,7 +90,7 @@ namespace NotesApp
             }
             else
             {
-                MessageBox.Show("Odaberi bilješku za brisanje!");
+                MessageBox.Show("Odaberi bilješku za brisanje!!");
             }
         }
     }
